@@ -135,13 +135,13 @@ def ask_weather_assistant(prompt):
         model="thinkingmachines/inkling",
         messages=[
             {"role": "user", "content": prompt},
-        message,
+        message
             {
                 'role': 'tool',
                 'tool_call_id': tool_call.id,
                 'content': json.dumps(result)
             }
-m  c        ],
+        ],
     )
 
     return final_response.choices[0].message.content
