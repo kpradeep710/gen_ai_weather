@@ -135,7 +135,7 @@ def ask_weather_assistant(prompt):
         model="thinkingmachines/inkling",
         messages=[
             {"role": "user", "content": prompt},
-        message
+        message,
             {
                 'role': 'tool',
                 'tool_call_id': tool_call.id,
