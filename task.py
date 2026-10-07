@@ -3,7 +3,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 load_dotenv()
 
-NVIDIA_TOKEN = os.getenv("")
+NVIDIA_TOKEN = os.getenv("nvdia_token")
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
