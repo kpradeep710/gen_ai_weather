@@ -1,13 +1,13 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 WORKDIR /weather
 
 COPY requirements.txt .
 
-RUN python -m pip install --upgrade pip
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY task-1.py .
 
-CMD ["python", "task.py"]
+EXPOSE 8000
+
+CMD ["python", "task-1.py"]
